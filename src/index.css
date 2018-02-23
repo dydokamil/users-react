@@ -1,0 +1,113 @@
+/* #ffef96 */
+/* #50394c */
+/* #f18973 */
+/* #bc5a45 */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #bc5a45;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  display: inline-block;
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+.card-header {
+}
+
+.card-content {
+  padding: 1rem;
+  background: #fff;
+}
+
+.button-fancy {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.button-fancy:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-out-in 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.button-fancy:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.button-fancy:focus {
+  outline: 0;
+  background-color: transparent;
+  color: #fff;
+}
+
+.button-fancy:active {
+  outline: 0 !important;
+  background-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 0;
+}
+
+.button-fancy:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.button-fancy:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.navbar {
+  margin-bottom: 2rem;
+}
+
+.slide-from-bottom {
+  animation: slide-from-bottom-kf 0.2s ease-out, opaque 0.2s ease-out,
+    fade-kf 0.4s ease-out;
+}
+
+.slide-to-bottom {
+  animation: slide-from-bottom-kf 0.2s ease-out reverse,
+    fade-kf 0.2s ease-out reverse;
+}
+
+@keyframes slide-from-bottom-kf {
+  from {
+    transform: translateY(45px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fade-kf {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
