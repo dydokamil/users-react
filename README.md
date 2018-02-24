@@ -1,3 +1,7 @@
+## Demo
+
+https://react-anims.herokuapp.com/
+
 ## Quickstart
 
     git clone https://github.com/dydokamil/users-react.git
