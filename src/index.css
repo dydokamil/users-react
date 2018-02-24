@@ -16,6 +16,7 @@ body {
   border-radius: 0px;
   display: inline-block;
   box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+  cursor: pointer;
 }
 
 .card-header {
@@ -80,34 +81,14 @@ body {
   transform: scaleX(1);
 }
 
+.button-fancy:disabled,
+.button-fancy[disabled],
+.button-fancy[disabled="disabled"],
+.button-fancy:disabled {
+  border-color: #ff0000 !important;
+  background-color: transparent !important;
+}
+
 .navbar {
   margin-bottom: 2rem;
-}
-
-.slide-from-bottom {
-  animation: slide-from-bottom-kf 0.2s ease-out, opaque 0.2s ease-out,
-    fade-kf 0.4s ease-out;
-}
-
-.slide-to-bottom {
-  animation: slide-from-bottom-kf 0.2s ease-out reverse,
-    fade-kf 0.2s ease-out reverse;
-}
-
-@keyframes slide-from-bottom-kf {
-  from {
-    transform: translateY(45px);
-  }
-  to {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes fade-kf {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }

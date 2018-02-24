@@ -3,8 +3,7 @@ import _ from "lodash";
 const initialState = {
   fetching: false,
   user: null,
-  error: null,
-  idx: 1
+  error: null
 };
 
 export default function(state = initialState, action) {
@@ -15,13 +14,12 @@ export default function(state = initialState, action) {
       return {
         ...state,
         fetching: false,
-        users: { ...state.users, [action.user.id]: action.user },
-        idx: state.idx + 1
+        users: { ...state.users, [action.user.id]: action.user }
       };
     case "API_CALL_FAILURE":
-      return { ...state, fetching: false, users: null, error: action.error };
+      return { ...state, fetching: false, error: action.error };
     case "REMOVE_USER":
-      return { ...state, users: _.omit(state.users, action.user) };
+      return { ...state, error: null, users: _.omit(state.users, action.user) };
 
     default:
       return state;
